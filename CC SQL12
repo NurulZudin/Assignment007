@@ -3,8 +3,8 @@ Single-Row Subqueries:
 1.	Write a query to find the tracks which have longer duration than the average. Your query should include TrackId, Name, Milliseconds.
 
 SELECT TrackId, Name, Milliseconds from tracks WHERE Milliseconds > (SELECT AVG(Milliseconds) from tracks);	
-Multiple-Row Subqueries:
 
+Multiple-Row Subqueries:
 2.	Write a query that returns the customers whose sales representatives are Jane Peacock and Margaret Park. Your query should include CustomerID, First Name and Last Name of the customers.
 
 SELECT CustomerId, FirstName, LastName, SupportRepId FROM customers WHERE SupportRepId IN (SELECT EmployeeId FROM employees WHERE FirstName IN ('Jane', 'Margaret'));
